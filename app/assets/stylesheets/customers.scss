@@ -1,5 +1,21 @@
 ul,
+#challenge
+{
+  margin-bottom: 30px;
+  margin-left: 25px;
+  border:1px solid #332200;
+}
+
+ul,
 li,
-#customer {
-  list-style:disc;
+#challenge
+{
+  float:left;
+  width: 200px;
+  height: 70px;
+  list-style: none;
+  display: table;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  text-align: left;
 }
