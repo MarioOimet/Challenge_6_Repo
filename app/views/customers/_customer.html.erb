@@ -1,8 +1,15 @@
-<% @customer.each do |challenge|%>
+<% @customer.each do |challenge| %>
   <div class="challenge">
     <ul>
       <li><h2><%= challenge.full_name %></h2></li>
       <li><p><%= image_tag challenge.image %></p></li>
+
+      <% if challenge.province_id != nil %>
+          <li><p><strong>Province: </strong><%= challenge.province.name %></p></li>
+      <% else %>
+          <li><p><strong>Province: </strong>None</p></li>
+      <% end %>
+
       <li><p><%= challenge.phone_number %></p></li>
       <li><p><%= challenge.email_address %></p></li>
     </ul>

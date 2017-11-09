@@ -1,13 +1,13 @@
 class CustomersController < ApplicationController
   def index
-    @customer = Customer.all
+    @customer = Customer.includes(:province).all
   end
 
   def alphabetized
-    @customer = Customer.order(:full_name)
+    @customer = Customer.includes(:province).order(:full_name)
   end
 
   def missing_email
-    @customer = Customer.where('email_address = ""')
+    @customer = Customer.includes(:province).where('email_address = ""')
   end
 end
