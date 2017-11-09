@@ -1,1 +1,10 @@
-<p><%= image_tag("wizard-icon.png", :alt => "Wizard's Hat") %></p>
+<% @customer.each do |challenge|%>
+  <div class="challenge">
+    <ul>
+      <li><h2><%= challenge.full_name %></h2></li>
+      <li><p><%= image_tag challenge.image %></p></li>
+      <li><p><%= challenge.phone_number %></p></li>
+      <li><p><%= challenge.email_address %></p></li>
+    </ul>
+  </div>
+<% end %>
